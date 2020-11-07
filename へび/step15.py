@@ -10,26 +10,22 @@ s[sy][sx] = '*'
 for i in range(1,N+1):
     d,l = input().split()
     l = int(l)
-    houkou = muki + RL[d]
-    if houkou > 3:
-        houkou -=4
+    muki = muki + RL[d]
+    if muki > 3:
+        muki -=4
 
     flg = True
     for j in range(l):
         mx = sx
         my = sy
-        if houkou == 0:
+        if muki == 0:
             my-=1
-            muki=0
-        elif houkou == 1:
+        elif muki == 1:
             mx+=1
-            muki = 1
-        elif houkou == 2:
+        elif muki == 2:
             my+=1
-            muki = 2
-        elif houkou == 3:
+        elif muki == 3:
             mx-=1
-            muki = 3
             
         if my < 0:
             my=0
